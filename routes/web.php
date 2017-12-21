@@ -11,6 +11,23 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@home');
+
+Route::get('/acerca', 'PagesController@aboutUs');
+
+Route::get('/inicio', 'PagesController@inicio');
+
+Route::get('/registro', 'PagesController@registro');
+
+Route::get('/perfil', 'PagesController@perfil');
+
+Route::get('/menu', 'PagesController@menu');
+
+Route::get('/citas', 'PagesController@citas');
+
+
+Route::get('/crearcliente', 'PagesController@crearcliente');
+
+Route::get('/crearpaciente', 'PagesController@crearpaciente');
+
+Route::get('/disponibilidad', 'PagesController@disponibilidad');
