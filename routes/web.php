@@ -13,6 +13,8 @@
 
 Route::get('/', 'PagesController@home');
 
+Route::get('/messages/{message}', 'MessagesController@show');
+
 Route::get('/test', 'PagesController@test');
 
 Route::get('/acerca', 'PagesController@aboutUs');
