@@ -17,8 +17,9 @@ class MessagesController extends Controller
 
     }
 
-    public function create()
+    public function create(Request $request)
     {
+    	dd($request->all());
     	return 'Created!';
     }
 }
