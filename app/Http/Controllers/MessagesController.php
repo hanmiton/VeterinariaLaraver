@@ -19,6 +19,6 @@ class MessagesController extends Controller
 
     public function create()
     {
-    	return 'Created!'
+    	return 'Created!';
     }
 }
