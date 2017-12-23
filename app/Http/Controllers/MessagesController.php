@@ -19,7 +19,10 @@ class MessagesController extends Controller
 
     public function create(Request $request)
     {
-    	dd($request->all());
-    	return 'Created!';
+    	$this->validate($request, [
+    		'message' => 'required'
+    	]);
+
+    	return 'llego';
     }
 }
