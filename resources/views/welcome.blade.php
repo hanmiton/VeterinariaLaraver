@@ -2,6 +2,13 @@
 
 @section('content')
 <div class="row">
+    <form action="/messages/create" method="post">
+        <div class="form-group">
+            <input type="text" name="message" class="form-control" placeholder="Que estas pensando?">
+        </div>
+    </form>
+</div>
+<div class="row">
     @forelse($messages as $message)
         <div class="col-6">
             <img class="img-thumbnail" src="{{ $message->image }}">
