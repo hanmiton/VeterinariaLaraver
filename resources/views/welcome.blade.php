@@ -4,7 +4,7 @@
 <div class="row">
     <form action="/messages/create" method="post">
         {{ csrf_field() }}
-        <div class="form-group @if($errors->has('message')) danger @endif">
+        <div class="form-group @if($errors->has('message')) has-danger @endif">
             <input type="text" name="message" class="form-control" placeholder="Que estas pensando?">
             @if ($errors->has('message'))
                 @foreach ($errors->get('message') as $error)
