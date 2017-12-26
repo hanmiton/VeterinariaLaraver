@@ -22,7 +22,7 @@ class MessagesController extends Controller
     {
     	$this->validate($request, [
     		'message' => ['required', 'max:160']
-    	], );
+    	]);
 
     	return 'llego';
     }
