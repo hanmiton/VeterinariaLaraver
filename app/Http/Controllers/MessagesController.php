@@ -24,5 +24,7 @@ class MessagesController extends Controller
     		'cotent' => $request->input('message'),
     		'image' => 'http://lorempixel.com/600/338?'.mt_rand(0,1000)
     	]);
+
+    	return redirect('/messages/'.$message->id);
     }
 }
