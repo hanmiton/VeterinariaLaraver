@@ -19,12 +19,16 @@
         <div class="col-6">
             <img class="img-thumbnail" src="{{ $message->image }}">
             <p class="card-text">
-                {{ $message->content }}
+                {{ $message->cotent }}
                 <a href="/messages/{{ $message->id }}"> Leer m as</a>
             </p>
         </div>
     @empty
         <p>No hay mensajes destacados. </p>
     @endforelse
+
+    @if(count($messages))
+        {{ $messages->links() }}
+    @endif
 </div>
 @endsection
