@@ -37,3 +37,6 @@ Route::get('/crearcliente', 'PagesController@crearcliente');
 Route::get('/crearpaciente', 'PagesController@crearpaciente');
 
 Route::get('/disponibilidad', 'PagesController@disponibilidad');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
