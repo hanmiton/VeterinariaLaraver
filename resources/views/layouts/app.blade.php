@@ -63,13 +63,7 @@
                             <li><a href="{{ route('login') }}">Entrar</a></li>
                             <li><a href="{{ route('register') }}">Registrarse</a></li>
                         @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <ul class="dropdown-menu">
-                                    <!--añadiendo secciones  principales-->
+                            <!--añadiendo secciones  principales-->
                             <li class="nav-item active">
                                     <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
                                 </li>
@@ -86,6 +80,13 @@
                                     <a class="nav-link" href="#">Contactanos</a>
                                 </li>
                                 <!--finalizacion seccion principal-->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu">
+
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
