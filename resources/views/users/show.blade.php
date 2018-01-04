@@ -6,7 +6,7 @@
 	Sigue a <span class="badge badge-default">{{ $user->follows->count() }}</span>
 </a>
 
-<a href="/{{ $user->username }}/followed" class="btn btn-link">
+<a href="/{{ $user->username }}/followers" class="btn btn-link">
 	Siguidores <span class="badge badge-default">{{ $user->followers->count() }}</span>
 </a>
 
