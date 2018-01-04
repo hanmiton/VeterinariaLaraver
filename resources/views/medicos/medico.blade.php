@@ -1,0 +1,1 @@
+dentro de vista medico

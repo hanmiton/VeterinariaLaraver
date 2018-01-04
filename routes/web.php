@@ -10,15 +10,21 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//controlador de paginas
 Route::get('/', 'PagesController@home');
 
+//medicos
+Route::get('/medicos/{medico}', 'MedicosController@show');
+
+Route::post('/medicos/create', 'MedicosController@create')->middleware('auth');
+
+//controladoresmensajes
 Route::get('/messages/{message}', 'MessagesController@show');
 
 Route::post('/messages/create', 'MessagesController@create')->middleware('auth');
 
 Auth::routes();
-
+//username 
 Route::get('/auth/facebook', 'SocialAuthController@facebook');
 
 Route::get('/auth/facebook/callback', 'SocialAuthController@callback');
@@ -36,6 +42,11 @@ Route::get('/{username}', 'UsersController@show');
 //provando ruta
 
 Route::get('/{username}/acerca', 'UsersController@acerca');
+
+
+
+
+
 
 /*
 Route::get('/{username}/test', 'PagesController@test');
