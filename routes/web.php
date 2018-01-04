@@ -15,7 +15,7 @@ Route::get('/', 'PagesController@home');
 
 Route::get('/messages/{message}', 'MessagesController@show');
 
-Route::post('/messages/create', 'MessagesController@create');
+Route::post('/messages/create', 'MessagesController@create')->middleware('auth');
 
 Route::get('/test', 'PagesController@test');
 
@@ -37,6 +37,7 @@ Route::get('/crearcliente', 'PagesController@crearcliente');
 Route::get('/crearpaciente', 'PagesController@crearpaciente');
 
 Route::get('/disponibilidad', 'PagesController@disponibilidad');
+
 Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
