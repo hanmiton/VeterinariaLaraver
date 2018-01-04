@@ -33,6 +33,10 @@ Route::post('/{username}/unfollow', 'UsersController@unfollow');
 
 Route::get('/{username}', 'UsersController@show');
 
+//provando ruta
+
+Route::get('/{username}/acerca', 'UsersController@acerca');
+
 /*
 Route::get('/{username}/test', 'PagesController@test');
 

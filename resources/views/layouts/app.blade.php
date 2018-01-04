@@ -12,7 +12,16 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <!--
+        <link rel="stylesheet" type="text/css" href="/public/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/app.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/font-awesome.min.css">
+    -->
+
+    
 </head>
+
 <body>
     <div id="app" class="container">
         <nav class="navbar navbar-ligth static-top navbar-toggleable-md bg-faded">
