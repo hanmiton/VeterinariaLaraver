@@ -13,6 +13,8 @@
 //controlador de paginas
 Route::get('/', 'PagesController@home');
 
+Route::get('/medico', 'PagesController@medico');
+
 //medicos
 Route::get('/medicos/{medico}', 'MedicosController@show');
 
