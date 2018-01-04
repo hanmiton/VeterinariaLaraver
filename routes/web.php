@@ -35,7 +35,7 @@ Route::get('/{username}', 'UsersController@show');
 
 Route::get('/test', 'PagesController@test');
 
-Route::get('/acerca', 'PagesController@aboutUs');
+Route::get('/acerca', 'UsersController@acerca');
 
 Route::get('/inicio', 'PagesController@inicio');
 

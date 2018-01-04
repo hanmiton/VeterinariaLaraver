@@ -58,8 +58,23 @@ class UsersController extends Controller
     	]);
     }
 
-    private function findByUsername($username)
+   
+
+    public function acerca($username)
+    {
+    	$user = $this->findByUsername($username);
+
+    	return view('users.acerca', [
+    		'user' => $user,
+    		'follows' => $user->followers,
+    	]);
+    }
+
+
+     private function findByUsername($username)
     {
     	return User::where('username', $username)->first();
     }
+
+
 }
