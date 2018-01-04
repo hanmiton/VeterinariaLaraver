@@ -28,7 +28,7 @@ class CreateMedicoRequest extends FormRequest
         ];
     }
 
-    public function messages() {
+    public function medicos() {
         return [
             'direccion.required' => 'Por favor, escribe tu mensaje',
             'direccion.max' => 'El mensaje no puede  superar los 160 caracteres.'
