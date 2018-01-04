@@ -33,26 +33,28 @@ Route::post('/{username}/unfollow', 'UsersController@unfollow');
 
 Route::get('/{username}', 'UsersController@show');
 
-Route::get('/test', 'PagesController@test');
+/*
+Route::get('/{username}/test', 'PagesController@test');
 
-Route::get('/acerca', 'UsersController@acerca');
+Route::get('/{username}/acerca', 'UsersController@acerca');
 
-Route::get('/inicio', 'PagesController@inicio');
+Route::get('/{username}/inicio', 'PagesController@inicio');
 
-Route::get('/registro', 'PagesController@registro');
+Route::get('/{username}/registro', 'PagesController@registro');
 
-Route::get('/perfil', 'PagesController@perfil');
+Route::get('/{username}/perfil', 'PagesController@perfil');
 
-Route::get('/menu', 'PagesController@menu');
+Route::get('/{username}/menu', 'PagesController@menu');
 
-Route::get('/citas', 'PagesController@citas');
+Route::get('/{username}/citas', 'PagesController@citas');
 
 
-Route::get('/crearcliente', 'PagesController@crearcliente');
+Route::get('/{username}/crearcliente', 'PagesController@crearcliente');
 
-Route::get('/crearpaciente', 'PagesController@crearpaciente');
+Route::get('/{username}/crearpaciente', 'PagesController@crearpaciente');
 
-Route::get('/disponibilidad', 'PagesController@disponibilidad');
+Route::get('/{username}/disponibilidad', 'PagesController@disponibilidad');
+*/
 //comentando
 
 
