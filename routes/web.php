@@ -1,4 +1,4 @@
-<?php
+'<?php
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +16,10 @@ Route::get('/', 'PagesController@home');
 Route::get('/messages/{message}', 'MessagesController@show');
 
 Route::post('/messages/create', 'MessagesController@create')->middleware('auth');
+
+Auth::routes();
+
+Route::get('/{username}/follows', 'UsersController@follows');
 
 Route::get('/{username}', 'UsersController@show');
 
@@ -40,6 +44,7 @@ Route::get('/crearpaciente', 'PagesController@crearpaciente');
 
 Route::get('/disponibilidad', 'PagesController@disponibilidad');
 
-Auth::routes();
+
 
 //Route::get('/home', 'HomeController@index')->name('home');
+'
