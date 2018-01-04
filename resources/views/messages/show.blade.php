@@ -1,9 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Mesaje id: {{ $message->id }}</h1>
-<img src="{{ $message->image }}">
-<p>
-	{{ $message->cotent }}
-</p>
+<h1 class="h3">Mesaje id: {{ $message->id }}</h1>
+@include('messages.message')
 @endsection
