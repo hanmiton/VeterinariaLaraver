@@ -41,7 +41,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('celular') ? ' has-error' : '' }}">
-                            <label for="celular" class="col-md-4 control-label">E-Mail Address</label>
+                            <label for="celular" class="col-md-4 control-label">Celular</label>
 
                             <div class="col-md-6">
                                 <input id="celular" type="celular" class="form-control" name="celular" value="{{ old('celular') }}" required>
@@ -55,7 +55,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('cod_vet') ? ' has-error' : '' }}">
-                            <label for="cod_vet" class="col-md-4 control-label">E-Mail Address</label>
+                            <label for="cod_vet" class="col-md-4 control-label">Cod_Vet</label>
 
                             <div class="col-md-6">
                                 <input id="cod_vet" type="cod_vet" class="form-control" name="cod_vet" value="{{ old('cod_vet') }}" required>
@@ -69,7 +69,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('cedula') ? ' has-error' : '' }}">
-                            <label for="cedula" class="col-md-4 control-label">E-Mail Address</label>
+                            <label for="cedula" class="col-md-4 control-label">Cedula</label>
 
                             <div class="col-md-6">
                                 <input id="cedula" type="cedula" class="form-control" name="cedula" value="{{ old('cedula') }}" required>
