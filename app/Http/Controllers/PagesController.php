@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Message;
+use App\Medico;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -19,6 +20,20 @@ class PagesController extends Controller
 	    ]);
 	    	
    	}
+
+      public function medico() 
+   {
+
+       $medicos = Medico::latest()->paginate(10);
+
+       return view('welcomemed', [
+         'medicos' => $medicos,
+       ]);
+         
+      }
+
+
+
 
    	public function test() {
 	    	//$messages = Message::all();
