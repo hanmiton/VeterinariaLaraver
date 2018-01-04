@@ -47,4 +47,3 @@ Route::get('/disponibilidad', 'PagesController@disponibilidad');
 
 
 //Route::get('/home', 'HomeController@index')->name('home');
-'
