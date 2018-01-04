@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Message;
 use App\Medico;
+
+
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
