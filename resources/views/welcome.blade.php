@@ -11,7 +11,7 @@
                     <div class= "form-control-feedback"> {{ $error }} </div>
                 @endforeach
             @endif
-            <input type="file" name="form-control-file" name="image">
+            <input type="file" class="form-control-file" name="image">
         </div>
     </form>
 </div>
