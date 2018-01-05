@@ -12,4 +12,9 @@ class Conversation extends Model
     {
     	return $this->belongsToMany(User::class);
     }
+
+    public function privateMessages()
+    {
+    	return $this->hasMany(PrivateMessage::class);
+    }
 }
