@@ -92,7 +92,7 @@ class UsersController extends Controller
     }
 
     public function showConversation(Conversation $conversation){
-        dd($connversation);
+        dd($conversation);
     }
 
      private function findByUsername($username)
