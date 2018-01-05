@@ -13,7 +13,7 @@ class CreateSocialProfilesTable extends Migration
      */
     public function up()
     {
-        Schema::create('social_profile', function (Blueprint $table) {
+        Schema::create('social_profiles', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
 
@@ -31,6 +31,6 @@ class CreateSocialProfilesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('social_profile');
+        Schema::dropIfExists('social_profiles');
     }
 }
