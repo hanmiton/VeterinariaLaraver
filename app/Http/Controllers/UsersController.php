@@ -94,7 +94,11 @@ class UsersController extends Controller
     public function showConversation(Conversation $conversation){
 
         $conversation->load('users', 'privateMessages');
-        dd($conversation);
+        
+        return view('users.conversation', [
+            'conversation' => $conversation,
+            'user' => auth()->user(),
+        ]);
     }
 
      private function findByUsername($username)
