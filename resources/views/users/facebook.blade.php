@@ -14,12 +14,25 @@
 					</label>
 					<input class="form-control" type="text" name="name" value="{{ $user->name }}" readonly>	
 				</div>	
-				<div class="form-group">	
-					<label for="email" class="form-control-label">	
-						Email
-					</label>
-					<input class="form-control" type="text" name="email" value="{{ $user->email }}" readonly>	
-				</div>		
+
+				@if (is_null($user->email))
+					<div class="form-group">	
+							<label for="email" class="form-control-label">	
+								Email
+							</label>
+							<input class="form-control" type="text" name="email" value="{{  old('email') }}">	
+					</div>	
+				@else
+					<div class="form-group">	
+							<label for="email" class="form-control-label">	
+								Email
+							</label>
+							<input class="form-control" type="text" name="email" value="{{ $user->email }}" readonly>	
+					</div>
+				@endif
+
+
+						
 				<div class="form-group">	
 					<label for="username" class="form-control-label">	
 						Nombre de usuario

@@ -16,6 +16,11 @@ class CreateSocialProfilesTable extends Migration
         Schema::create('social_profile', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+
+            $table->integer('user_id')->unsigned();
+            $table->string('social_id');
+
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

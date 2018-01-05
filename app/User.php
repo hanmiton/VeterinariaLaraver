@@ -46,4 +46,11 @@ class User extends Authenticatable
     {
         return $this->follows->contains($user);
     }
+
+    //relacion de que un usuario tiene muchas redes sociales
+
+    public function socialProfiles()
+    {
+        return $this->hasMany(SocialProfile::class);
+    }
 }
