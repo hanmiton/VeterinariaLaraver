@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Conversation;
+use App\PrivateMessage;
+
 class UsersController extends Controller
 {
     //
@@ -58,7 +61,25 @@ class UsersController extends Controller
     	]);
     }
 
-   
+    public function sendPrivateMessage($username, Request $request)
+    {
+        $user = $this->findByUsername($username);
+
+        $me = $request->user();
+        $message= $request->input('message');
+
+        $conversation  = Conversation::create();
+        $conversation->users()->attach($me);
+        $conversation->users()->attach($user);
+
+        $privateMessage = PrivateMessage::create([
+            'conversation_id' => $conversation->id,
+            'user_id' => $me->id,
+            'message' => $message,
+        ]);
+
+        return redirect('/conversations/'.$conversation->id);
+    }
 
     public function acerca($username)
     {
@@ -70,6 +91,9 @@ class UsersController extends Controller
     	]);
     }
 
+    public function showConversation(Conversation $conversation){
+        dd($connversation);
+    }
 
      private function findByUsername($username)
     {

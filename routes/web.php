@@ -23,7 +23,7 @@ Route::post('/medicos/create', 'MedicosController@create')->middleware('auth');
 //controladoresmensajes
 Route::get('/messages/{message}', 'MessagesController@show');
 
-Route::post('/messages/create', 'MessagesController@create')->middleware('auth');
+
 
 Auth::routes();
 //username 
@@ -33,13 +33,22 @@ Route::get('/auth/facebook/callback', 'SocialAuthController@callback');
 
 Route::post('/auth/facebook/register', 'SocialAuthController@register');
 
-Route::get('/{username}/follows', 'UsersController@follows');
+
+
+Route::group(['middleware' => 'auth'], function(){
+	Route::post('/{username}/dms', 'UsersController@sendPrivateMessage');
+	Route::get('/conversations/{conversation}', 'UsersController@showConversation');
+	Route::post('/messages/create', 'MessagesController@create');
+	Route::get('/{username}/follows', 'UsersController@follows');
+	Route::post('/{username}/unfollow', 'UsersController@unfollow');
+});
+
+
 
 Route::get('/{username}/followers', 'UsersController@followers');
 
 Route::post('/{username}/follow', 'UsersController@follow');
 
-Route::post('/{username}/unfollow', 'UsersController@unfollow');
 
 Route::get('/{username}', 'UsersController@show');
 

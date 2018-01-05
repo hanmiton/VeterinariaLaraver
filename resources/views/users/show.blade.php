@@ -14,13 +14,14 @@
 @if(Auth::check())
 	@if(Gate::allows('dms', $user))
 		<form action="/{{ $user->username }}/dms" method="post">
+			{{ crsf_field() }}
 			<input type="text" name="message" class="form-control">
 			<button type="submit" class="btn btn-success">
 				Enviar DM 
 			</button>
 		</form>
 	@endif
-	
+
 	@if(Auth::user()->isFollowing($user))
 		<form action="/{{ $user->username }}/unfollow" method="post">
 			{{ csrf_field() }}
