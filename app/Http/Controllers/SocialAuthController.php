@@ -17,6 +17,10 @@ class SocialAuthController extends Controller
     {
     	$user = Socialite::driver('facebook')->user();
 
-    	dd($user);
+    	session()->flash('facebookUser', $user);
+
+    	return view('users.facebook', [
+    			'user' => $user,
+    	]);
     }
 }
