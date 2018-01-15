@@ -9,9 +9,12 @@ use App\PrivateMessage;
 
 class UsersController extends Controller
 {
+
     //
     public function show($username)
     {
+        throw new \Exception("Simulando un error.");
+        
     	$user = $user = $this->findByUsername($username);
 
     	return view('users.show' , [
