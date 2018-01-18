@@ -36,7 +36,14 @@
                     <ul class="nav navbar-nav">
                         <li class="nav-item">
                             <form action="/messages">
-                                <input type="text" name="query" class="form-control" required>
+                                <div class="input-group">
+                                    <input type="text" name="query" class="form-control" placeholder="Buscar..." required>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-outline-success">
+                                            Buscar
+                                        </button>
+                                    </span>    
+                                </div>
                             </form>
                         </li>
                     </ul>
