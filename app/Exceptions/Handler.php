@@ -16,6 +16,22 @@ class Handler extends ExceptionHandler
      * @var array
      */
     protected $dontReport = [
+        \Illuminate\Auth\AuthenticationException::class,
+        \Illuminate\Auth\Access\AuthenticationException::class,
+        \Symfony\Component\HttpKernel\Exception\HttpException::class,
+        \Illuminate\Database\Eloquent\ModelNotFoundException::Class,
+        \Illuminate\Session\TokenMismatchException::class,
+        \Illuminate\validation\ValidationException::class,
+        /*
+        class ClassName extends AnotherClass
+        {
+            
+            function __construct(argument)
+            {
+                # code...
+            }
+        }
+        */
         //
     ];
 
