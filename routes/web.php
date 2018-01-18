@@ -23,6 +23,7 @@ Route::post('/medicos/create', 'MedicosController@create')->middleware('auth');
 //controladoresmensajes
 Route::get('/messages/{message}', 'MessagesController@show');
 
+Route::get('/messages', 'MessagesController@search');
 
 
 Auth::routes();
@@ -34,7 +35,7 @@ Route::get('/auth/facebook/callback', 'SocialAuthController@callback');
 Route::post('/auth/facebook/register', 'SocialAuthController@register');
 
 
-Route::get('/messages', 'MessagesController@search');
+
 
 Route::group(['middleware' => 'auth'], function(){
 	Route::post('/{username}/dms', 'UsersController@sendPrivateMessage');
