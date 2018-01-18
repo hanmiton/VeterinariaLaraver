@@ -14,6 +14,8 @@ class PagesController extends Controller
 
 	public function home() 
 	{
+      //Console::info('etamos aqui');
+       //Console::info('mymessage');
 
 	    $messages = Message::latest()->paginate(10);
 

@@ -56,7 +56,7 @@ Route::group(['middleware' => 'auth'], function(){
 });
 
 
-/*
+
 Route::get('/{username}/followers', 'UsersController@followers');
 
 Route::post('/{username}/follow', 'UsersController@follow');
@@ -67,8 +67,6 @@ Route::get('/{username}', 'UsersController@show');
 //provando ruta
 
 Route::get('/{username}/acerca', 'UsersController@acerca');
-
-*/
 
 
 
