@@ -13,6 +13,10 @@
 //controlador de paginas
 Route::get('/', 'PagesController@home');
 
+
+Route::get('/messages', 'MessagesController@search');
+Route::get('/messages/{message}', 'MessagesController@show');
+
 Route::get('/medicos', 'PagesController@medico');
 
 //medicos
@@ -23,8 +27,7 @@ Route::post('/medicos/create', 'MedicosController@create')->middleware('auth');
 //controladoresmensajes
 
 
-Route::get('/messages', 'MessagesController@search');
-Route::get('/messages/{message}', 'MessagesController@show');
+
 
 Auth::routes();
 //username 

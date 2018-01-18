@@ -6,6 +6,7 @@ use App\Message;
 use App\Http\Requests\CreateMessageRequest;
 use Illuminate\Http\Request;
 
+
 class MessagesController extends Controller
 {
     public function show(Message $message)
