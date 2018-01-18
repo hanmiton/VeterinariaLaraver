@@ -11,11 +11,18 @@
 |
 */
 //controlador de paginas
-Route::get('/', 'PagesController@home');
 
 
 Route::get('/messages', 'MessagesController@search');
+
 Route::get('/messages/{message}', 'MessagesController@show');
+
+
+
+Route::get('/', 'PagesController@home');
+
+
+
 
 Route::get('/medicos', 'PagesController@medico');
 
@@ -49,7 +56,7 @@ Route::group(['middleware' => 'auth'], function(){
 });
 
 
-
+/*
 Route::get('/{username}/followers', 'UsersController@followers');
 
 Route::post('/{username}/follow', 'UsersController@follow');
@@ -61,7 +68,7 @@ Route::get('/{username}', 'UsersController@show');
 
 Route::get('/{username}/acerca', 'UsersController@acerca');
 
-
+*/
 
 
 
