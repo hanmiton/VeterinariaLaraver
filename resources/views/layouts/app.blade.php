@@ -34,7 +34,11 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        <li class="nav-item">
+                            <form action="/messages">
+                                <input type="text" name="query" class="form-control" required>
+                            </form>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
