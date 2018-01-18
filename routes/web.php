@@ -34,6 +34,7 @@ Route::get('/auth/facebook/callback', 'SocialAuthController@callback');
 Route::post('/auth/facebook/register', 'SocialAuthController@register');
 
 
+Route::get('/messages', 'MessagesController@search');
 
 Route::group(['middleware' => 'auth'], function(){
 	Route::post('/{username}/dms', 'UsersController@sendPrivateMessage');
