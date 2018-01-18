@@ -21,10 +21,10 @@ Route::get('/medicos/{medico}', 'MedicosController@show');
 Route::post('/medicos/create', 'MedicosController@create')->middleware('auth');
 
 //controladoresmensajes
-Route::get('/messages/{message}', 'MessagesController@show');
+
 
 Route::get('/messages', 'MessagesController@search');
-
+Route::get('/messages/{message}', 'MessagesController@show');
 
 Auth::routes();
 //username 
