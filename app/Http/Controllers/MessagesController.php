@@ -42,7 +42,7 @@ class MessagesController extends Controller
         //Console::info('etamos aqui');
         $query = $request->input('query');
 
-        $messages = Message::where('cotent', 'LIKE', "%$query%")->get(); 
+        $messages = Message::with('user')->where('cotent', 'LIKE', "%$query%")->get(); 
 
        
        return view('messages.index', ['messages' => $messages,]);
