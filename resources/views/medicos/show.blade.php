@@ -4,7 +4,7 @@
 <h1 class="h3">Medico id: {{ $medico->id }}</h1>
 @include('medicos.medico')
 
-@foreach($user->enfermedades as $emfermedad)
+@foreach($medico->enfermedades as $emfermedad)
 		@include('enfermedades.enfermedad')
 @endforeach
 @endsection

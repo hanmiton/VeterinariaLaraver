@@ -11,13 +11,13 @@ use App\Http\Requests\CreateEnfermedadRequest;
 
 use Illuminate\Http\Request;
 
+use App\Http\Requests;
+
 class MedicosController extends Controller
 {
     // 
     public function show(Medico $medico)
-    {
-    	
-    
+    {	
     	return view ('medicos.show', [
     		'medico' => $medico,
     	]);
@@ -26,6 +26,7 @@ class MedicosController extends Controller
 
     public function create(CreateMedicoRequest $request)
     {
+      
     	$user = $request->user();
 
     	$medico = Medico::create([
@@ -44,14 +45,13 @@ class MedicosController extends Controller
       public function createEnf(CreateEnfermedadRequest $request)
     {
 
+        dd($request);
+        $medico = $request->medico();
 
-        $medico = Medico::create([
-            'user_id' => $user->id,
-            'direccion' => $request->input('direccion'),
-            'telefono' => $request->input('telefono'),
-            'celular' => $request->input('celular'),
-            'cod_vet' => $request->input('cod_vet'),
-            'cedula' => $request->input('cedula'),
+        $enfermedad = Enfermedad::create([
+            'medico_id' => $medico->id,
+            'nombre' => $request->input('nombre'),
+            'descripicion' => $request->input('descripcion'),
         ]);  
 
         return redirect('/medicos/'.$medico->id);
