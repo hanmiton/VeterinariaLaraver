@@ -12,6 +12,19 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <style type="text/css">
+        body{
+            background: #2b2d34 url(../images/cover-bg-1.jpg) center;
+            background-size: cover;
+        }
+    </style>
+    <link rel="shortcut icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i|Montserrat:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">    
     <!--
         <link rel="stylesheet" type="text/css" href="/public/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/public/css/style.css">

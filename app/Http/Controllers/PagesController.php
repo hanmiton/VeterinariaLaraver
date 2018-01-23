@@ -38,6 +38,43 @@ class PagesController extends Controller
 
 
 
+       public function paciente() 
+   {
+
+       //$pacientes = Paciente::latest()->paginate(10);
+
+       return view('welcomepac');
+         
+      }
+
+
+      //rutas prueba funcionalidad
+      public function main() 
+      {
+
+      
+
+       return view('main');
+         
+      }
+
+
+      public function perfil() 
+      {
+
+      
+
+       return view('perfil');
+         
+      }
+
+
+       public function menuMedicos() 
+      {
+       return view('menuMedicos'); 
+      }
+
+
 
    	public function test() {
 	    	//$messages = Message::all();
@@ -60,10 +97,7 @@ class PagesController extends Controller
    		return view('registro');
    	}
 
-   	public function perfil()
-   	{
-   		return view('perfil');
-   	}
+   
 
    	public function menu()
    	{

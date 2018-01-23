@@ -34,4 +34,21 @@ class MedicosController extends Controller
 
     	return redirect('/medicos/'.$medico->id);
     }
+
+           
+
+    public function medicos() 
+    {
+      //Console::info('etamos aqui');
+       //Console::info('mymessage');
+
+        $medicos = Medico::latest()->paginate(10);
+
+        return view('listMedicos', [
+            'medicos' => $medicos,
+        ]);
+                    
+    }
+
+    
 }

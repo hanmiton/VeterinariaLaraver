@@ -22,17 +22,38 @@ Route::get('/messages/{message}', 'MessagesController@show');
 Route::get('/', 'PagesController@home');
 
 
+//rutas logica
+Route::get('/main', 'PagesController@main');
+
+Route::get('/perfil', 'PagesController@perfil');
+
+Route::get('/menu', 'PagesController@menu');
+
+Route::get('/menuMedicos', 'PagesController@menuMedicos');
 
 
-Route::get('/medicos', 'PagesController@medico');
 
+Route::get('/medicos', 'MedicosController@medicos');
+
+Route::get('/medico', 'PagesController@medico');
 //medicos
 Route::get('/medicos/{medico}', 'MedicosController@show');
 
 Route::post('/medicos/create', 'MedicosController@create')->middleware('auth');
 
+Route::get('/addEspecialidad', 'MedicosController@createEspecialidad');
+
+
 //controladoresmensajes
 
+//pacientes
+
+
+Route::get('/paciente', 'PagesController@paciente');
+
+
+//secretaria
+Route::get('/menusec', 'PagesController@secretaria');
 
 
 
