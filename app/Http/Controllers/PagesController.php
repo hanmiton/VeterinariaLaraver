@@ -38,6 +38,15 @@ class PagesController extends Controller
 
 
 
+        public function enfermedad() 
+   {
+
+       return view('welcomeenf');
+         
+      }
+
+
+
        public function paciente() 
    {
 

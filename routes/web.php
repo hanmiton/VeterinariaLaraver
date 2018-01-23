@@ -36,10 +36,21 @@ Route::get('/menuMedicos', 'PagesController@menuMedicos');
 Route::get('/medicos', 'MedicosController@medicos');
 
 Route::get('/medico', 'PagesController@medico');
+
+//enfermedades medico
+
+Route::get('/enfermedad', 'PagesController@enfermedad');
+
+
 //medicos
 Route::get('/medicos/{medico}', 'MedicosController@show');
 
+
+
 Route::post('/medicos/create', 'MedicosController@create')->middleware('auth');
+
+Route::post('/enfermedad/create', 'MedicosController@createEnf')->middleware('auth');
+
 
 Route::get('/addEspecialidad', 'MedicosController@createEspecialidad');
 

@@ -13,4 +13,8 @@ class Medico extends Model
     {
     	return $this->belongsTo(User::class);
     }
+
+    public function enfermedades(){
+    	return $this->hasMany(Enfermedad::class);
+    }
 }

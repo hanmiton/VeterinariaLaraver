@@ -24,14 +24,14 @@ class CreateMedicoRequest extends FormRequest
     public function rules()
     {
         return [
-           'direccion' => ['required', 'max:160'] 
+           'nombre' => ['required', 'max:160'] 
         ];
     }
 
     public function medicos() {
         return [
-            'direccion.required' => 'Por favor, escribe tu direccion',
-            'direccion.max' => 'El mensaje no puede  superar los 160 caracteres.'
+            'nombre.required' => 'Por favor, escribe tu nombre',
+            'nombre.max' => 'El mensaje no puede  superar los 160 caracteres.'
         ];
     }
 }
