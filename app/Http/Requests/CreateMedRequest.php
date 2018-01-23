@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateEnfermedadRequest extends FormRequest
+class CreateMedRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -28,7 +28,7 @@ class CreateEnfermedadRequest extends FormRequest
         ];
     }
 
-    public function enfermedads() {
+    public function medicos() {
         return [
             'nombre.required' => 'Por favor, escribe tu nombre',
             'nombre.max' => 'El mensaje no puede  superar los 160 caracteres.'

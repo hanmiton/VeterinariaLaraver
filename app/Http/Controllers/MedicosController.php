@@ -26,7 +26,8 @@ class MedicosController extends Controller
 
     public function create(CreateMedicoRequest $request)
     {
-      
+
+        dd($request);
     	$user = $request->user();
 
     	$medico = Medico::create([
