@@ -78,6 +78,8 @@ Route::group(['middleware' => 'auth'], function(){
 
 
 
+
+
 Route::get('/{username}/followers', 'UsersController@followers');
 
 Route::post('/{username}/follow', 'UsersController@follow');
