@@ -95,7 +95,7 @@
                         <div class="collapse navbar-collapse pull-xs-right justify-content-end" id="navbarSupportedContent">
                             <ul class="navbar-nav mt-2 mt-md-0">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link" href="#">Inicio hola <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Nosotros</a>

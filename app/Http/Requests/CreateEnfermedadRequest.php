@@ -28,7 +28,7 @@ class CreateEnfermedadRequest extends FormRequest
         ];
     }
 
-    public function enfermedads() {
+    public function medicos() {
         return [
             'nombre.required' => 'Por favor, escribe tu nombre',
             'nombre.max' => 'El mensaje no puede  superar los 160 caracteres.'

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Message;
 use App\Medico;
-
+use App\Enfermedad;
 
 use Illuminate\Http\Request;
 
@@ -38,11 +38,14 @@ class PagesController extends Controller
 
 
 
-        public function enfermedad() 
-   {
+      public function enfermedad(Medico $medico) 
+      {
 
-       return view('welcomeenf');
+      // return view('welcomeenf');
          
+      return view('welcomeenf', [
+         'medico' => $medico,
+       ]);
       }
 
 

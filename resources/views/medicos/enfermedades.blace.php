@@ -1,1 +1,0 @@
-enfermedades.blace.php

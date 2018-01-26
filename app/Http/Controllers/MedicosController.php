@@ -27,7 +27,7 @@ class MedicosController extends Controller
     public function create(CreateMedicoRequest $request)
     {
 
-        dd($request);
+        
     	$user = $request->user();
 
     	$medico = Medico::create([
@@ -46,13 +46,13 @@ class MedicosController extends Controller
       public function createEnf(CreateEnfermedadRequest $request)
     {
 
-        dd($request);
-        $medico = $request->medico();
+        dd($request->user()->medico());
+        $user = $request->user();
 
         $enfermedad = Enfermedad::create([
-            'medico_id' => $medico->id,
+            'medico_id' => '1',
             'nombre' => $request->input('nombre'),
-            'descripicion' => $request->input('descripcion'),
+            'descripcion' => $request->input('descripcion'),
         ]);  
 
         return redirect('/medicos/'.$medico->id);

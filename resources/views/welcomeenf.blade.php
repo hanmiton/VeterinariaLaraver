@@ -8,9 +8,9 @@
                 <div class="panel-heading">Registro Enfermedades</div>
 
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="/enfermedad/create"">
+                    <form class="form-horizontal" method="POST" action="/enfermedad/create/{{ $medico->id }} "">
                         {{ csrf_field() }}
-
+                        <div class="text-muted">{{ $medico->id }} 
                         <div class="form-group{{ $errors->has('nombre') ? ' has-error' : '' }}">
                             <label for="nombre" class="col-md-4 control-label">nombre</label>
 

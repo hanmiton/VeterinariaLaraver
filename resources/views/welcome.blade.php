@@ -38,7 +38,7 @@
 <div class="cover-container pb-5">
     <div class="cover-inner container">
         <h1 class="jumbotron-heading">Centro Veterinario <strong>"SAN MARTIN"</strong></h1>
-        <p class="lead">Ofrecemos servicos control y peluqueria de animales</p>
+        <p class="lead">Ofrecemos servicos control y peluqueria de animales fadsf</p>
         <p>
             
 
